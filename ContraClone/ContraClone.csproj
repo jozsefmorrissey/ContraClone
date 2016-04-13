@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8A3E4783-247B-42AB-A692-1D6188EE1EDE}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>ContraClone</RootNamespace>
+    <AssemblyName>ContraClone</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Compile Include="cs\Init.cs" />
+    <Compile Include="cs\Window.cs" />
+    <Compile Include="cs\Animation.cs" />
+    <Compile Include="cs\Physics.cs" />
+    <Compile Include="cs\Weapon.cs" />
+    <Compile Include="cs\Scene.cs" />
+    <Compile Include="cs\Enumeration.cs" />
+    <Compile Include="cs\Graphic\Sprite.cs" />
+    <Compile Include="cs\Graphic\Ground.cs" />
+    <Compile Include="cs\Graphic\Background.cs" />
+    <Compile Include="cs\Control\GameControl.cs" />
+    <Compile Include="cs\Control\AnimationControl.cs" />
+    <Compile Include="cs\Graphic\Character.cs" />
+    <Compile Include="cs\Graphic\SceneObject.cs" />
+    <Compile Include="cs\Utilities.cs" />
+    <Compile Include="cs\Graphic\SpriteImage.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Data" />
+    <Reference Include="System" />
+    <Reference Include="gtk-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f">
+      <Package>gtk-sharp-2.0</Package>
+    </Reference>
+    <Reference Include="atk-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f">
+      <Package>gtk-sharp-2.0</Package>
+    </Reference>
+    <Reference Include="glib-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f">
+      <Package>glib-sharp-2.0</Package>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\cropped_contra_images\explosion2.png" />
+    <None Include="Images\cropped_contra_images\back_run1.png" />
+    <None Include="Images\cropped_contra_images\back_run2.png" />
+    <None Include="Images\cropped_contra_images\back_shoot_laydown.png" />
+    <None Include="Images\cropped_contra_images\bullet.png" />
+    <None Include="Images\cropped_contra_images\died_back.png" />
+    <None Include="Images\cropped_contra_images\died_right.png" />
+    <None Include="Images\cropped_contra_images\explosion1.png" />
+    <None Include="Images\cropped_contra_images\explosion3.png" />
+    <None Include="Images\cropped_contra_images\idle1.png" />
+    <None Include="Images\cropped_contra_images\idle1_run1.png" />
+    <None Include="Images\cropped_contra_images\idle1_run2.png" />
+    <None Include="Images\cropped_contra_images\idle2.png" />
+    <None Include="Images\cropped_contra_images\idle2_run1.png" />
+    <None Include="Images\cropped_contra_images\idle2_run2.png" />
+    <None Include="Images\cropped_contra_images\jump1.png" />
+    <None Include="Images\cropped_contra_images\jump2.png" />
+    <None Include="Images\cropped_contra_images\land1.png" />
+    <None Include="Images\cropped_contra_images\land2.png" />
+    <None Include="Images\cropped_contra_images\powerup.png" />
+    <None Include="Images\cropped_contra_images\shoot_back_up.png" />
+    <None Include="Images\cropped_contra_images\shoot_right1.png" />
+    <None Include="Images\cropped_contra_images\shoot_right2.png" />
+    <None Include="Images\cropped_contra_images\shoot_right_laydown.png" />
+    <None Include="Images\cropped_contra_images\shoot_right_up.png" />
+    <None Include="Images\cropped_contra_images\tuck1.png" />
+    <None Include="Images\cropped_contra_images\tuck2.png" />
+    <None Include="Images\cropped_contra_images\tuck3.png" />
+    <None Include="Images\cropped_contra_images\tuck4.png" />
+    <None Include="Images\cropped_contra_images\wave.png" />
+    <None Include="Images\level1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="cs\" />
+    <Folder Include="cs\Graphic\" />
+    <Folder Include="cs\Control\" />
+  </ItemGroup>
+</Project>

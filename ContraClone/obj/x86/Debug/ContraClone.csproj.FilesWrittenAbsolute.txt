@@ -1,0 +1,7 @@
+/home/jozsef/Desktop/ContraClone/ContraClone/obj/x86/Debug/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/home/jozsef/Desktop/ContraClone/ContraClone/bin/Debug/ContraClone.exe.mdb
+/home/jozsef/Desktop/ContraClone/ContraClone/bin/Debug/ContraClone.exe
+/home/jozsef/Desktop/ContraClone/ContraClone/obj/x86/Debug/ContraClone.exe
+/home/jozsef/Desktop/ContraClone/ContraClone/obj/x86/Debug/ContraClone.exe.mdb
+/home/jozsef/Desktop/ContraClone/ContraClone/obj/x86/Debug/.NETFramework,Version=v4.5.1.AssemblyAttribute.cs
+/home/jozsef/Desktop/ContraClone/ContraClone/obj/x86/Debug/.NETFramework,Version=v4.0.AssemblyAttribute.cs
