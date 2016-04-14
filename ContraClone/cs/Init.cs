@@ -17,7 +17,7 @@ namespace ContraClone
 		{
 			
 			window = new Window ();
-			scene = new Scene ();
+			scene = new Scene (window);
  
 			// Display the form as a modal dialog box.
 			Application.Run(window);

@@ -6,12 +6,9 @@ namespace ContraClone
 {
 	public class Background : SceneObject
 	{
+		public int endOfMap;
 		protected int bottomOffset;
 		protected int topOffset;
-		protected int cropMinX;
-		protected int cropMaxX;
-		protected int cropMinY;
-		protected int cropMaxY;
 		protected Bitmap image;
 		protected Window window;
 
@@ -33,6 +30,7 @@ namespace ContraClone
 				double scale = (double)window.Height / (double)height;
 				Bitmap clip = new Bitmap (image, new Size ((int)(image.Width * scale), (int)(height * scale)));
 
+				endOfMap = clip.Width;
 
 				int minHeight = 0;
 				int maxHeight = (int)(clip.Height - bottomOffset*scale);
@@ -66,7 +64,7 @@ namespace ContraClone
 
 		public void paint_background(Graphics g, SceneObject focalPoint)
 		{
-			calculatePosition (focalPoint);
+
 		}
 
 		protected bool update_bacground (SceneObject focalPoint)	

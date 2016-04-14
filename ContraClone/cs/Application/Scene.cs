@@ -8,14 +8,16 @@ namespace ContraClone
 	public class Scene
 	{
 		protected Object[] objects;
-		public static Timer time;
-		public static SceneObject view_target;
-		public static Character hero;
+		public Timer time;
+		public SceneObject view_target;
+		public Character hero;
+		public Window window;
 		protected Background[] backgrounds;
-		protected Background bkgd;
+		public Background bkgd;
 
-		public Scene ()
+		public Scene (Window win)
 		{
+			window = win;
 			backgrounds = new Background[5];
 			objects = new Object[20];
 			level1 ();
@@ -32,16 +34,18 @@ namespace ContraClone
 			bkgd.calculatePosition (view_target);
 			backgrounds [backgrounds.Length - 1] = bkgd;
 		}
-
-		public bool move_heros(int right, int left, int up, int down)
-		{
-			return hero.move (right, left, up, down);
-		}
-
+			
 		public void paint(Graphics graphics)
 		{
 			bkgd.paint_background (graphics, hero);
 			hero.paint (graphics);
+		}
+
+		public void updateGraphics(int right, int left, int up, int down)
+		{
+			hero.move (right, left, up, down);
+			//view_target.move (hero.x);
+			bkgd.calculatePosition (hero);
 		}
 	}
 

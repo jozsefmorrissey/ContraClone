@@ -2,6 +2,7 @@
 using System.Windows.Forms;
 using System.Drawing;
 using System.Threading;
+using System.Drawing.Drawing2D;
 
 namespace ContraClone
 {
@@ -12,7 +13,6 @@ namespace ContraClone
 
 		public Window () : base()
 		{
-
 
 			FlowLayoutPanel panel = new FlowLayoutPanel();
 			panel.FlowDirection = FlowDirection.TopDown;
@@ -40,6 +40,7 @@ namespace ContraClone
 
 			this.Text = "Contra Clone 5000";
 
+			this.ResizeRedraw = true;
 			this.HelpButton = true;
 			this.MaximizeBox = true;
 			this.MinimizeBox = true;
@@ -50,6 +51,7 @@ namespace ContraClone
 			Graphics formGraphics;
 			formGraphics = this.CreateGraphics();
 
+			e.Graphics.SmoothingMode = SmoothingMode.AntiAlias;
 
 			Init.scene.paint (formGraphics);
 			Thread.Sleep (1);

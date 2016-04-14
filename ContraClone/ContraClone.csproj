@@ -33,21 +33,23 @@
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
     <Compile Include="cs\Init.cs" />
-    <Compile Include="cs\Window.cs" />
-    <Compile Include="cs\Animation.cs" />
-    <Compile Include="cs\Physics.cs" />
-    <Compile Include="cs\Weapon.cs" />
-    <Compile Include="cs\Scene.cs" />
-    <Compile Include="cs\Enumeration.cs" />
-    <Compile Include="cs\Graphic\Sprite.cs" />
-    <Compile Include="cs\Graphic\Ground.cs" />
-    <Compile Include="cs\Graphic\Background.cs" />
     <Compile Include="cs\Control\GameControl.cs" />
     <Compile Include="cs\Control\AnimationControl.cs" />
-    <Compile Include="cs\Graphic\Character.cs" />
-    <Compile Include="cs\Graphic\SceneObject.cs" />
-    <Compile Include="cs\Utilities.cs" />
-    <Compile Include="cs\Graphic\SpriteImage.cs" />
+    <Compile Include="cs\GraphicObjects\Sprite.cs" />
+    <Compile Include="cs\GraphicObjects\Ground.cs" />
+    <Compile Include="cs\GraphicObjects\Background.cs" />
+    <Compile Include="cs\GraphicObjects\Character.cs" />
+    <Compile Include="cs\GraphicObjects\SceneObject.cs" />
+    <Compile Include="cs\GraphicObjects\SpriteImage.cs" />
+    <Compile Include="cs\Objects\Weapon.cs" />
+    <Compile Include="cs\Objects\Barrior.cs" />
+    <Compile Include="cs\Objects\Animation.cs" />
+    <Compile Include="cs\UtilityClasses\Physics.cs" />
+    <Compile Include="cs\UtilityClasses\Utilities.cs" />
+    <Compile Include="cs\UtilityClasses\Enumeration.cs" />
+    <Compile Include="cs\Application\Scene.cs" />
+    <Compile Include="cs\Application\Window.cs" />
+    <Compile Include="cs\Objects\Camera.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System.Drawing" />
@@ -99,7 +101,10 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="cs\" />
-    <Folder Include="cs\Graphic\" />
     <Folder Include="cs\Control\" />
+    <Folder Include="cs\GraphicObjects\" />
+    <Folder Include="cs\Objects\" />
+    <Folder Include="cs\UtilityClasses\" />
+    <Folder Include="cs\Application\" />
   </ItemGroup>
 </Project>
