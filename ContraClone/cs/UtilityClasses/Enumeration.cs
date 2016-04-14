@@ -4,12 +4,12 @@ namespace ContraClone
 {
 	public enum animEnum
 	{
-		IDLE, WALK, JUMP, CROUCH, DIE,
+		IDLE, WALK, JUMP, CROUCH, DIE, FALL
 	}
 
 	public enum charEnum
 	{
-		GROUNDED, JUMPING, FALLING, DEAD
+		GROUNDED, MOVING, DEAD
 	}
 }
 

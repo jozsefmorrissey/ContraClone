@@ -38,20 +38,27 @@ namespace ContraClone
 
 		public void paint(Graphics formGraphics)
 		{
-			staticX = Init.window.Width / 2 - image.Width;
-			staticY = Init.window.Height / 2 - image.Height;
-			formGraphics.DrawImage (image, x, y);
+			if (this.x > Init.window.Width / 2) {
+				staticX = Init.window.Width / 2;
+			} else 
+			{
+				staticX = (int)this.x;
+			}	
+
+
+			formGraphics.DrawImage (image, staticX, y);
 		}
 
-		public bool move(int right, int left, int up, int down)
+		public bool move(int rightLeft, int upDown)
 		{
-			this.x += right + left;
-			this.y += up + down;
+			this.x += rightLeft;
+			this.y += upDown;
 
 			if (this.x < image.Width / 2)
 				this.x = image.Width / 2;
 			if (this.x > Init.scene.bkgd.endOfMap - image.Width / 2)
 				this.x = image.Width / 2;
+
 
 				lastX = x;
 				lastY = y;

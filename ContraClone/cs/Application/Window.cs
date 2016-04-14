@@ -4,6 +4,7 @@ using System.Drawing;
 using System.Threading;
 using System.Drawing.Drawing2D;
 
+//TODO: Repair initial background size error.
 namespace ContraClone
 {
 	public class Window : Form
@@ -28,15 +29,6 @@ namespace ContraClone
 		public void Build()
 		{
 			this.WindowState = FormWindowState.Maximized;
-			String imagePath = System.IO.Directory.GetCurrentDirectory () + "/../../Images/level1.png";
-			Image background = (Bitmap)Image.FromFile (imagePath, true);
-			Background bkgd = new Background (background, this);
-			Sprite so = new Sprite (this.Width/2, this.Height/2);
-			bkgd.calculatePosition (so);
-
-			//this.BackgroundImage = ScaleImage(background, 4*background.Width, this.Height);
-			
-			BackgroundImageLayout = ImageLayout.Stretch;
 
 			this.Text = "Contra Clone 5000";
 
@@ -54,11 +46,16 @@ namespace ContraClone
 			e.Graphics.SmoothingMode = SmoothingMode.AntiAlias;
 
 			Init.scene.paint (formGraphics);
-			Thread.Sleep (1);
+			//Thread.Sleep (1);
 
 			base.OnPaint (e);
 
 			formGraphics.Dispose();
+		}
+
+		protected override void OnResize (EventArgs e)
+		{
+			Init.scene.bkgd.calculatePosition (Init.scene.view_target);
 		}
 
 	}

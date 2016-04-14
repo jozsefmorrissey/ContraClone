@@ -36,7 +36,6 @@
     <Compile Include="cs\Control\GameControl.cs" />
     <Compile Include="cs\Control\AnimationControl.cs" />
     <Compile Include="cs\GraphicObjects\Sprite.cs" />
-    <Compile Include="cs\GraphicObjects\Ground.cs" />
     <Compile Include="cs\GraphicObjects\Background.cs" />
     <Compile Include="cs\GraphicObjects\Character.cs" />
     <Compile Include="cs\GraphicObjects\SceneObject.cs" />
@@ -44,12 +43,11 @@
     <Compile Include="cs\Objects\Weapon.cs" />
     <Compile Include="cs\Objects\Barrior.cs" />
     <Compile Include="cs\Objects\Animation.cs" />
-    <Compile Include="cs\UtilityClasses\Physics.cs" />
     <Compile Include="cs\UtilityClasses\Utilities.cs" />
     <Compile Include="cs\UtilityClasses\Enumeration.cs" />
     <Compile Include="cs\Application\Scene.cs" />
     <Compile Include="cs\Application\Window.cs" />
-    <Compile Include="cs\Objects\Camera.cs" />
+    <Compile Include="cs\UtilityClasses\AutomatedMovement.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System.Drawing" />

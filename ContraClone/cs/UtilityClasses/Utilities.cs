@@ -21,6 +21,13 @@ namespace ContraClone
 
 			return newImage;
 		}
+
+		public static void applyGravity(SceneObject sceneObject)
+		{
+			//TODO: Implement.
+		}
 	}
+
+
 }
 

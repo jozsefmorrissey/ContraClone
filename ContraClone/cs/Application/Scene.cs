@@ -13,6 +13,7 @@ namespace ContraClone
 		public Character hero;
 		public Window window;
 		protected Background[] backgrounds;
+		protected Barrior[] barriors;
 		public Background bkgd;
 
 		public Scene (Window win)
@@ -28,7 +29,7 @@ namespace ContraClone
 			String imagePath = System.IO.Directory.GetCurrentDirectory () + "/../../Images/level1.png";
 			Image background = (Bitmap)Image.FromFile (imagePath, true);
 
-			hero = new Character (Init.window.Width/2, Init.window.Height/2, "");
+			hero = new Character (1000, 200, "");
 			view_target = hero;
 			bkgd = new Background (background, Init.window);
 			bkgd.calculatePosition (view_target);
@@ -37,15 +38,17 @@ namespace ContraClone
 			
 		public void paint(Graphics graphics)
 		{
-			bkgd.paint_background (graphics, hero);
+			//TODO: Create loops that update all objects present in the scene.
+			//bkgd.paint_background (graphics, hero);
 			hero.paint (graphics);
 		}
 
-		public void updateGraphics(int right, int left, int up, int down)
+		public void updateGraphics(int rightLeft, int upDown)
 		{
-			hero.move (right, left, up, down);
+			hero.move (rightLeft, upDown);
 			//view_target.move (hero.x);
 			bkgd.calculatePosition (hero);
+			Init.window.Invalidate ();
 		}
 	}
 

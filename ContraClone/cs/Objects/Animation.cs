@@ -21,7 +21,7 @@ namespace ContraClone
 			String fileNameSuffix = ".png";
 			while (spriteFound) 
 			{
-
+				//TODO: create standardized file name system and automate image import.
 			}
 		}
 	}

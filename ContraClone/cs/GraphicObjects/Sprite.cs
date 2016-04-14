@@ -3,6 +3,7 @@ using System.Drawing;
 
 namespace ContraClone
 {
+	// Non-interactive Image to be diplayed
 	public class Sprite : SceneObject
 	{
 		protected Image image;
